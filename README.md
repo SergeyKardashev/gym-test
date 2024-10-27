@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Test task Gym with timer, popup and getting data from API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Figma layout](https://www.figma.com/design/04GvwIiY1NqfAGq50ThaKs/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-Frontend?node-id=0-1&t=S5wf9XAklM82KfxY-1)
 
-## Available Scripts
+## Тестовое задание для кандидата на вакансию Frontend-разработчик
+https://www.figma.com/file/9XgWK3p8hV7kGaeNbVqnpm/%D0%B4%D0%BB%D1%8F-%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B8?type=design&node-id=0%3A1&mode=design&t=h09Rzn4ocBcWUV0t-1
 
-In the project directory, you can run:
+* Сверстать все элементы первого экрана с тарифами.
+* отобразить выделение тарифов при выборе, 
+* на кнопку купить наложить анимационный эффект мигания (перехода у кнопки нет), 
+* отобразить таймер на закрепленном хедере - поставить 2 минуты, 
+* при остатке в 30 сек таймер мигает и выделяется красным, 
+* установить чекбокс
+* Разложить тарифы полученные от сервиса на страницу с тарифами, на первом экране
+* Когда таймер заканчивается скидочные цены пропадают и остаются цены без скидки, предложить вариант как лучше это анимировать
+* После этого появляется попап, где отображены ещё большие скидки, также полученные от сервиса
+* При закрытии попапа остаемся на первом экране где отображаются тарифы без скидок
+* Если хотите показать свои умения в адаптиве, то его можно сделать, но это не обязательный пункт
+* Тестовое задание необходимо выполнить на следующий технологиях: React, Next, Taiwind.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Получение данных от сервиса
+### Ссылка на получение:  https://t-pay.iqfit.app/subscribe/list-test
+### Пример одной записи:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```json
+{
+        "name": "1 неделя",
+        "price": 699,
+        "lengthInDays": 0,
+        "isPopular": true,
+        "isEndless": false,
+        "isDiscount": false,
+        "nonDiscountId": null,
+        "id": "f347d050-073c-4969-ae91-7346f935cf70",
+        "ownerId": "00000000-0000-0000-0000-000000000000",
+        "statusId": null,
+        "creationDateTime": "2024-03-07T14:18:38.5451758+03:00",
+        "deleted": false
+    },
+```
 
-### `npm test`
+### Необходимые для работы поля
+* name - отображаемое имя тарифа
+* price - цена тарифа
+* isPopular - если true, то данный тариф необходимо отображать до истечения таймера
+* isDiscount - если true. то данный тариф необходимо отображать на попапе
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Ты нам подходишь если: 
+* Уверенно владеешь React, TypeScript, JavaScript и умеешь писать чистый и поддерживаемый код
+* Ты хорошо и быстро верстаешь и умеешь делать адаптивные страницы.
+* Ты умеешь разбираться в чужом коде
+* У тебя был опыт разработки на Next.Js
+* У тебя был опыт и ты понимаешь как работать с асинхронностью
+* У тебя есть желание учиться и расти вместе с командой.
 
-### `npm run build`
+#### Будет плюсом, если ты знаешь:
+* Redux
+* Taiwind
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Мы используем в проектах:
+* HTML
+* CSS
+* JavaScript
+* TypeScript
+* React
+* Next
+* Tailwind
+* Redux (пока не используем, но в ближайшем будущем будем)
